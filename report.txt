@@ -1,0 +1,23 @@
+Total number of orders the site received: 160
+
+Total amount of orders: 28050
+
+Names of the customers who ordered once and did not order again: 
+Ballari Upadhyay
+Atman Mathur
+Sohalia Das
+Salmalin Mehta
+Gauri Som
+Dhenuka Dhawan
+Nirav Khalsa
+Adri Dave
+Niloufer Handa
+Hastin Mangal
+Mitra Gounder
+
+Distribution of customers: 
+1 | 11
+2 | 9
+3 | 10
+4 | 8
+5+ | 9
