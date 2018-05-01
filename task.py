@@ -1,7 +1,5 @@
 NEW_LINE = '\n'
 
-HTML_TEMPLATE = "<HTML> <HEAD> <TITLE>Order Report</TITLE> </HEAD> <BODY> %s</BODY> </HTML>"
-
 NEW_HTML_LINE = '<br>'
 
 def read_data():
@@ -95,6 +93,7 @@ def save_file(extension, new_line):
     report_str += print_customer_distribution(order_count, new_line)
 
     if extension == 'html':
+        HTML_TEMPLATE = open('html-code.txt','r').read()
         report_str = HTML_TEMPLATE % report_str
 
     output_file.write(report_str)

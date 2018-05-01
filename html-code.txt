@@ -1,0 +1,1 @@
+<HTML> <HEAD> <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script><TITLE>Order Report</TITLE> </HEAD> <BODY> %s <div id="chart_div"></div></BODY> </HTML>
