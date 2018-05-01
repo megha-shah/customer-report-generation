@@ -14,6 +14,7 @@ def read_data():
     for line in data_file:
         dic = {}
 
+        #ignoring the empty lines
         if not line.strip():
             continue
 
@@ -37,8 +38,11 @@ def read_data():
     return phone_details, tot_orders, tot_amount
 
 
-# distribution of customers on the basis of their number of orders
 def distribution_of_customers(details):
+    """
+        distribution of customers on the basis of their number of orders
+    """
+
     # order_count is a dictionary whose key is order count and value is customer count
     order_count = {}
 
@@ -61,8 +65,12 @@ def distribution_of_customers(details):
     return ordered_once, order_count      
 
 
-# convert mapping into output format 
+
 def get_customer_distribution(order_count, new_line):
+    """
+    convert mapping into output format 
+    """
+
     # new_report_str is a string in output format
     new_report_str = ''
 
@@ -90,8 +98,11 @@ def get_customer_distribution(order_count, new_line):
     return new_report_str, graph_list          
 
 
-# storing the names of customers who ordered once
 def customer_who_orderderd_once(names, new_line):
+    """
+    storing the names of customers who ordered once
+    """
+
     new_report_str = ''
     new_report_str += 'Names of the customers who ordered once and did not order again: ' + new_line
     for name in names:
@@ -100,8 +111,11 @@ def customer_who_orderderd_once(names, new_line):
     return new_report_str 
 
 
-#report saving in output file
 def save_file(extension, new_line):
+    """
+    report saving in output file
+    """
+
     output_file = open('report.' + extension, 'w')
 
     report_str = ''
@@ -141,8 +155,11 @@ def save_file(extension, new_line):
     output_file.close()
 
 
-#generating report 
 def generate_report(tot_orders, tot_amount, ordered_once, order_count):
+    """
+    generating report 
+    """
+
     save_file('txt', NEW_LINE)
     save_file('html', NEW_HTML_LINE)
 
