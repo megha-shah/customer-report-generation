@@ -56,7 +56,7 @@ def distribution_of_customers(details):
     return ordered_once, order_count      
 
 
-def print_customer_distribution(order_count, new_line):
+def get_customer_distribution(order_count, new_line):
     new_report_str = ''
     new_report_str += 'Distribution of customers: ' + new_line
     for key in order_count:
@@ -90,9 +90,11 @@ def save_file(extension, new_line):
     report_str += customer_who_orderderd_once(ordered_once, new_line)
     report_str += new_line
 
-    report_str += print_customer_distribution(order_count, new_line)
+    report_str += get_customer_distribution(order_count, new_line)
 
     if extension == 'html':
+        js_file = open('js-code.txt', 'r').read()
+        print js_file % 'qqqq'
         HTML_TEMPLATE = open('html-code.txt','r').read()
         report_str = HTML_TEMPLATE % report_str
 
