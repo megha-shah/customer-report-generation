@@ -3,7 +3,7 @@ google.charts.setOnLoadCallback(drawBasic);
 
 function drawBasic() {
 
-      var data = google.visualization.arrayToDataTable(%s);
+      var data = google.visualization.arrayToDataTable([['orders_count', 'customers_count'], ['1', 11], ['2', 9], ['3', 10], ['4', 8], ['5+', 9]]);
 
       var options = {
         title: 'Customer distribution',
